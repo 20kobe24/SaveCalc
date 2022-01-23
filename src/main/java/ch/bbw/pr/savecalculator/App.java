@@ -2,7 +2,7 @@ package ch.bbw.pr.savecalculator;
 
 /**
  * Application
- * @autor <your name>
+ * @autor Ryan Carpio
  * @version 1.0.0
  */
 public class App 
