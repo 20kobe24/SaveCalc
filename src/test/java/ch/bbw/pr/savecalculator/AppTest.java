@@ -2,6 +2,8 @@ package ch.bbw.pr.savecalculator;
 
 import static org.junit.Assert.assertTrue;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -12,8 +14,21 @@ public class AppTest
     /**
      * Rigorous Test :-)
     //  */
+    @Before
+    public void setup() {
+        SaveCalculator testee = new SaveCalculator();
+        testee = new SaveCalculator();
+    }
+
+    @After
+    public void deleteSetup() {
+        int value1 = 2;
+        int value2 = 2;
+        SaveCalculator testee = new SaveCalculator();
+        testee.summe(value1, value2);
+    }
     @Test
-    public void TestSumem4ZweiNegativeOK() {
+    public void testSummeZweiNegativeIsOk() {
         int value1 = -150;
         int value2 = -200;
         SaveCalculator testee = new SaveCalculator();
@@ -21,7 +36,7 @@ public class AppTest
     }
 
     @Test
-    public void TestSumme4ZweiPositivenOK() {
+    public void testSummeZweiPositiveIsOk() {
         int value1 = 150;
         int value2 = 150;
         SaveCalculator testee = new SaveCalculator();
