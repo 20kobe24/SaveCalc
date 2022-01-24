@@ -2,38 +2,35 @@ package ch.bbw.pr.savecalculator;
 
 import static org.junit.Assert.assertTrue;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest {
+public class AppTest 
+{
     /**
      * Rigorous Test :-)
-     */
-    @Before
-    public void setup() {
+    //  */
+    @Test
+    public void TestSumem4ZweiNegativeOK() {
+        int value1 = -150;
+        int value2 = -200;
         SaveCalculator testee = new SaveCalculator();
-        testee = new SaveCalculator();
+        assertTrue(testee.summe(value1, value2) == -350);
     }
-    @After
-    public void deleteSetup() {
-        int value1 = 2;
-        int value2 = 2;
+
+    @Test
+    public void TestSumme4ZweiPositivenOK() {
+        int value1 = 150;
+        int value2 = 150;
         SaveCalculator testee = new SaveCalculator();
-        testee.summe(value1, value2);
+        assertTrue(testee.summe(value1, value2) == 300);
     }
     // @Test
     // public void shouldAnswerWithTrue()
-
     // {
     //     assertTrue( true );
     // }
-
-
-
-
-
+    
 }
